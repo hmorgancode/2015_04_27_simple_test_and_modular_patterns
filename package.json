@@ -1,0 +1,32 @@
+{
+  "name": "2015_04_27_simple_test_and_modular_patterns",
+  "version": "0.1.0",
+  "description": "code fellows assignment",
+  "main": "lib/greet.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha-test": "^0.12.7",
+    "mocha": "^2.2.4"
+  },
+  "scripts": {
+    "test": "./node_modules/grunt-cli/bin/grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/runonwalls/2015_04_27_simple_test_and_modular_patterns.git"
+  },
+  "author": "hmorgan471@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/runonwalls/2015_04_27_simple_test_and_modular_patterns/issues"
+  },
+  "homepage": "https://github.com/runonwalls/2015_04_27_simple_test_and_modular_patterns"
+}
