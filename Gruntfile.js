@@ -1,8 +1,9 @@
 'use strict';
 
 module.exports = function(grunt) {
+  var srcFiles = ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js'];
 
-  grunt.initConfig({
+  grunt.initConfig({    
     mochaTest: {
       test: {
         options: {
@@ -13,25 +14,22 @@ module.exports = function(grunt) {
 
     jshint: {
       all: {
-        src: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js']
+        src: srcFiles
       },
-
       options: {
-        node: true,
-        globals: {
-          describe: true,
-          it: true,
-          before: true,
-          after: true,
-          beforeEach: true,
-          afterEach: true
-        }
+        jshintrc: '.jshintrc'
       }
-    } //end jshint 
+    }, //end jshint 
+
+    watch: {
+      files: srcFiles,
+      tasks: ['test']
+    } //end watch
   });//end grunt.initConfig
 
   grunt.loadNpmTasks('grunt-mocha-test');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('test', ['mochaTest', 'jshint:all']);
   grunt.registerTask('default', ['test']);
